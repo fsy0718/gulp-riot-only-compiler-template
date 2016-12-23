@@ -1,0 +1,31 @@
+{
+  "name": "gulp-riot-only-compiler-template",
+  "version": "0.0.1",
+  "description": "只转换tag中的模板，不生成js文件，为riot.Tag中的tmpl所用",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fsy0718/gulp-riot-only-compiler-template.git"
+  },
+  "keywords": [
+    "riot",
+    "gulp-riot",
+    "riot-compiler",
+    "gulp-riot-template"
+  ],
+  "author": "fsy0718 <fsy0718@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fsy0718/gulp-riot-only-compiler-template/issues"
+  },
+  "homepage": "https://github.com/fsy0718/gulp-riot-only-compiler-template#readme",
+  "devDependencies": {
+    "gulp-util": "^3.0.7",
+    "riot": "^3.0.5",
+    "riot-compiler": "^3.1.1",
+    "through2": "^2.0.3"
+  }
+}
