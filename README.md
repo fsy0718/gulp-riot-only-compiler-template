@@ -8,7 +8,7 @@ npm install --save-dev gulp-riot-only-compiler-template
 ```
 
 ```js
-var gulp = require('gulp);
+var gulp = require('gulp');
 var riotTmpl = require('gulp-riot-only-compiler-template');
 gulp.task('riotTmpl', function(){
     gulp.src('./*.tag')
