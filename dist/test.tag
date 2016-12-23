@@ -1,1 +1,1 @@
-<img src="test.jpg"> <img riot-src="{test}"> <p riot-style="color: {color}">aaa</p> <p onclick="{test}">click</p> <input type="text" value="test"> <input type="text" riot-value="{test}">
+<test> <img src="test.jpg"> <img riot-src="{test}"> <p riot-style="color: {color}">aaa</p> <p onclick="{test}">click</p> <input type="text" value="test"> <input type="text" riot-value="{test}"> </test>

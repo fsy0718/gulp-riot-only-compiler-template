@@ -1,7 +1,7 @@
-var gutil, through, ref$, compile, parsers;
+var gutil, through, ref$, compile;
 gutil = require('gulp-util');
 through = require('through2');
-ref$ = require('riot'), compile = ref$.compile, parsers = ref$.parsers;
+ref$ = require('riot-compiler'), compile = ref$.html;
 
 module.exports = function (opts) {
   var transform;
@@ -15,22 +15,15 @@ module.exports = function (opts) {
       case !file.isStream():
         return callback(new gutil.PluginError('gulp-riot-only-compiler-template', 'Stream not supported'));
       default:
-        if (_opts.parsers != null) {
-        Object.keys(_opts.parsers).forEach(function(x){
-          return Object.keys(_opts.parsers[x]).forEach(function(y){
-            return parsers[x][y] = _opts.parsers[x][y];
-          });
-        });
-        delete _opts.parsers;
-      }
+
       try {
-        compiledCode = compile(file.contents.toString(), _opts, file.path);
-        var _tmpl = compiledCode.split("'")[3];
+        compiledCode = compile(file.contents.toString(), _opts);
+
       } catch (e$) {
         err = e$;
         return callback(new gutil.PluginError('gulp-riot-only-compiler-template', file.path + ": Compiler Error: " + err));
       }
-        file.contents = new Buffer(_tmpl);
+        file.contents = new Buffer(compiledCode);
         splitedPath = file.path.split('.');
         splitedPath[splitedPath.length - 1] = opts.extname || 'tag';
         file.path = splitedPath.join('.');

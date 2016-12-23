@@ -1,6 +1,6 @@
 {
   "name": "gulp-riot-only-compiler-template",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "只转换tag中的模板，不生成js文件，为riot.Tag中的tmpl所用",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,7 @@
   "homepage": "https://github.com/fsy0718/gulp-riot-only-compiler-template#readme",
   "devDependencies": {
     "gulp-util": "^3.0.7",
-    "riot": "^3.0.5",
+    "riot-compiler": "^3.1.1",
     "through2": "^2.0.3"
   }
 }
